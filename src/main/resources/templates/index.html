@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Showroom</title>
+</head>
+<body>
+<h1>Welcome To Car Showroom</h1>
+<a href="addcars">Add Car</a>
+<a href="home">View Cars</a>
+<h2>Search for cars</h2>
+<form action="/search" method="POST">
+    <input type="text" name="search" id="search" th:value="${search}" />
+    <input type="submit" value="Search" />
+</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>view oredr product</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-spacing: 0px;
+        }
+        th, td {
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>product</th>
+        <th>productName</th>
+        <th>deliveryDate</th>
+        <th>price</th>
+        <th>dispatch</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="order : ${order}">
+        <td th:text="${order.product}"></td>
+        <td th:text="${order.productName}"></td>
+        <td th:text="${order.deliveryDate}"></td>
+        <td th:text="${order.price}"></td>
+        <td th:text="${order.dispatch}"></td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+</body>
+</html>
